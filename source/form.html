@@ -42,54 +42,78 @@
       <h2 class="review__heading">Оставьте свой отзыв</h2>
       <p class="review__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых Вами
         достопримечательностях</p>
-      <form class="review__form" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset class="review__fieldset visitor-introduce">
-          <legend class="visitor-introduce__legend">Представьтесь:</legend>
-          <label class="visitor-introduce__label" for="name">Имя*:</label>
-          <input class="visitor-introduce__input" type="text" name="name" id="name" placeholder="Пётр"
-            pattern="[А-Яа-яЁ-ё]{1,}" required>
-          <label class="visitor-introduce__label" for="surname">Фамилия*:</label>
-          <input class="visitor-introduce__input" type="text" name="surname" id="surname" placeholder="Иванов"
-            pattern="[А-Яа-яЁ-ё]{1,}" required>
-          <label class="visitor-introduce__label" for="patronymic">Отчество:</label>
-          <input class="visitor-introduce__input" type="text" name="patronymic" id="patronymic"
-            placeholder="Александрович" pattern="[А-Яа-яЁ-ё]{1,}">
+      <form class="review__form review-form" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset class="review-form__fieldset">
+          <legend class="review-form__legend">Представьтесь:</legend>
+          <p class="review-form__paragraph">
+            <label class="review-form__label" for="name">Имя*:</label>
+            <input class="review-form__input" type="text" name="name" id="name" placeholder="Пётр"
+              pattern="[А-Яа-яЁ-ё]{1,}" required>
+          </p>
+          <p class="review-form__paragraph">
+            <label class="review-form__label" for="surname">Фамилия*:</label>
+            <input class="review-form__input" type="text" name="surname" id="surname" placeholder="Иванов"
+              pattern="[А-Яа-яЁ-ё]{1,}" required>
+          </p>
+          <p class="review-form__paragraph">
+            <label class="review-form__label" for="patronymic">Отчество:</label>
+            <input class="review-form__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович"
+              pattern="[А-Яа-яЁ-ё]{1,}">
+          </p>
         </fieldset>
-        <fieldset class="review__fieldset visitor-contacts">
-          <legend class="visitor-contacts__legend">Контактная информация:</legend>
-          <label class="visitor-contacts__label" for="phone">Контактный телефон*:</label>
-          <input class="visitor-contacts__input" type="tel" name="phone" id="phone" placeholder="Введите телефон"
-            pattern="\+7[0-9]{10}" title="Укажите номер в формате «+7xxxxxxxxxx»" required>
-          <label class="visitor-contacts__label" for="email">Электронная почта*:</label>
-          <input class="visitor-contacts__input" type="email" name="email" id="email" placeholder="Введите e-mail"
-            required>
+        <fieldset class="review-form__fieldset">
+          <legend class="review-form__legend">Контактная информация:</legend>
+          <p class="review-form__paragraph">
+            <label class="review-form__label" for="phone">Контактный телефон*:</label>
+            <input class="review-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон"
+              pattern="\+7[0-9]{10}" title="Укажите номер в формате «+7xxxxxxxxxx»" required>
+          </p>
+          <p class="review-form__paragraph">
+            <label class="review-form__label" for="email">Электронная почта*:</label>
+            <input class="review-form__input" type="email" name="email" id="email" placeholder="Введите e-mail"
+              required>
+          </p>
         </fieldset>
-        <fieldset class="review__fieldset visitor-impression">
-          <legend class="visitor-impression__legend">Ваше общее впечатление:</legend>
-          <input class="visitor-impression__input" type="radio" name="impression" id="good" value="good" checked>
-          <label class="visitor-impression__label" for="good">Скорее положительное</label>
-          <input class="visitor-impression__input" type="radio" name="impression" id="bad" value="bad">
-          <label class="visitor-impression__label" for="bad">Скорее отрицательное</label>
-          <input class="visitor-impression__input" type="radio" name="impression" id="difficult" value="difficult">
-          <label class="visitor-impression__label" for="difficult">Затрудняюсь ответить</label>
+        <fieldset class="review-form__fieldset">
+          <legend class="review-form__legend">Ваше общее впечатление:</legend>
+          <p class="review-form__paragraph">
+            <input class="review-form__input" type="radio" name="impression" id="good" value="good" checked>
+            <label class="review-form__label" for="good">Скорее положительное</label>
+          </p>
+          <p class="review-form__paragraph">
+            <input class="review-form__input" type="radio" name="impression" id="bad" value="bad">
+            <label class="review-form__label" for="bad">Скорее отрицательное</label>
+          </p>
+          <p class="review-form__paragraph">
+            <input class="review-form__input" type="radio" name="impression" id="difficult" value="difficult">
+            <label class="review-form__label" for="difficult">Затрудняюсь ответить</label>
+          </p>
         </fieldset>
-        <fieldset class="review__fieldset visitor-attractions">
-          <legend class="visitor-attractions__legend">Посещённые достопримечательности:</legend>
-          <input class="visitor-attractions__input" type="checkbox" name="bridge" id="bridge" checked>
-          <label class="visitor-attractions__label" for="bridge">Мост Дьявола</label>
-          <input class="visitor-attractions__input" type="checkbox" name="bell" id="bell" checked>
-          <label class="visitor-attractions__label" for="bell">Гора-Колокол</label>
-          <input class="visitor-attractions__input" type="checkbox" name="park" id="park" checked>
-          <label class="visitor-attractions__label" for="park">Слайд-парк</label>
-          <input class="visitor-attractions__input" type="checkbox" name="rocks" id="rocks">
-          <label class="visitor-attractions__label" for="rocks">Красные скалы</label>
+        <fieldset class="review-form__fieldset">
+          <legend class="review-form__legend">Посещённые достопримечательности:</legend>
+          <p class="review-form__paragraph">
+            <input class="review-form__input" type="checkbox" name="bridge" id="bridge" checked>
+            <label class="review-form__label" for="bridge">Мост Дьявола</label>
+          </p>
+          <p class="review-form__paragraph">
+            <input class="review-form__input" type="checkbox" name="bell" id="bell" checked>
+            <label class="review-form__label" for="bell">Гора-Колокол</label>
+          </p>
+          <p class="review-form__paragraph">
+            <input class="review-form__input" type="checkbox" name="park" id="park" checked>
+            <label class="review-form__label" for="park">Слайд-парк</label>
+          </p>
+          <p class="review-form__paragraph">
+            <input class="review-form__input" type="checkbox" name="rocks" id="rocks">
+            <label class="review-form__label" for="rocks">Красные скалы</label>
+          </p>
         </fieldset>
-        <fieldset class="review__fieldset visitor-emotions">
-          <legend class="visitor-emotions__legend">Опишите свои эмоции:</legend>
-          <textarea class="visitor-emotions__textarea" name="emotion" id="emotion" cols="30" rows="6"
+        <fieldset class="review-form__fieldset">
+          <legend class="review-form__legend">Опишите свои эмоции:</legend>
+          <textarea class="review-form__textarea" name="emotion" id="emotion" cols="30" rows="6"
             placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <button class="review__submit-button button" type="submit">Отправить отзыв</button>
+        <button class="review-form__submit-button button" type="submit">Отправить отзыв</button>
       </form>
     </section>
   </main>
