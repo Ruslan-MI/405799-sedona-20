@@ -58,7 +58,8 @@
             </figure>
             <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Борис</cite></p>
             <div class="photo-gallery__like-counter">
-              <button class="photo-gallery__like-button"><span class="visually-hidden">Поставить лайк</span></button>
+              <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
+                  лайк</span></button>
               <span class="photo-gallery__like-quantity">1350</span>
             </div>
           </li>
@@ -72,7 +73,8 @@
             </figure>
             <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Сергей</cite></p>
             <div class="photo-gallery__like-counter">
-              <button class="photo-gallery__like-button"><span class="visually-hidden">Поставить лайк</span></button>
+              <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
+                  лайк</span></button>
               <span class="photo-gallery__like-quantity">143</span>
             </div>
           </li>
@@ -86,7 +88,8 @@
             </figure>
             <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Пётр</cite></p>
             <div class="photo-gallery__like-counter">
-              <button class="photo-gallery__like-button"><span class="visually-hidden">Поставить лайк</span></button>
+              <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
+                  лайк</span></button>
               <span class="photo-gallery__like-quantity">96</span>
             </div>
           </li>
@@ -100,7 +103,8 @@
             </figure>
             <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Антон</cite></p>
             <div class="photo-gallery__like-counter">
-              <button class="photo-gallery__like-button"><span class="visually-hidden">Поставить лайк</span></button>
+              <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
+                  лайк</span></button>
               <span class="photo-gallery__like-quantity">254</span>
             </div>
           </li>
@@ -110,9 +114,35 @@
         <p class="video-gallery__question"><b>Всё ещё сомневаетесь?</b></p>
         <p class="video-gallery__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
-        <ul class="video-gallery__list">
-          <li class="video-gallery__item"></li>
-        </ul>
+        <div class="video-gallery__player player">
+          <video class="player__video" width="320" height="201" poster="https://via.placeholder.com/150x150"></video>
+          <div class="player__controls">
+            <div class="player__scale-block">
+              <div class="player__scale-controls">
+                <div class="player__scale-fulltime">
+                  <div class="player__scale-cached">
+                    <div class="player__scale-progress"></div>
+                  </div>
+                </div>
+                <div class="player__scale-point"></div>
+              </div>
+            </div>
+            <ul class="player__buttons-list">
+              <li class="player__buttons-item">
+                <button class="player__replay" type="button"><span class="visually-hidden">Воспроизвести
+                    заново</span></button>
+              </li>
+              <li class="player__buttons-item">
+                <button class="player__subtitles" type="button"><span class="visually-hidden">Включить
+                    субтитры</span></button>
+              </li>
+              <li class="player__buttons-item">
+                <button class="player__fullscreen" type="button"><span class="visually-hidden">На весь
+                    экран</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
