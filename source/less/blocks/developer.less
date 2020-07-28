@@ -1,4 +1,14 @@
 .developer__link {
   color: inherit;
   text-decoration: none;
+
+  &:hover .developer__link-logo,
+  &:active .developer__link-logo {
+    fill: @bright-background;
+  }
+
+  &:active .developer__link-logo {
+    fill: @general-black;
+    opacity: 0.3;
+  }
 }
