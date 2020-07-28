@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -10,168 +13,194 @@
 
   <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p> -->
 
-  <header class="page-header">
-    <nav class="main-navigation">
-      <a class="main-navigation__logo-link" href="index.html" title="Перейти на главную"><img
-          class="main-navigation__logo-image" src="https://via.placeholder.com/150x150" width="102" height="84"
-          alt="«City of Sedona»"></a>
-      <button class="main-navigation__close-button" type="button"><span class="visually-hidden">Открыть/закрыть
-          меню</span></button>
-      <ul class="main-navigation__list">
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link main-navigation__link--active">Фото и
-            видео</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="form.html">Форма отзыва</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="page-main">
-    <h1 class="page-main__heading visually-hidden">Галерея Седоны</h1>
-    <section class="welcome">
-      <h2 class="welcome__heading visually-hidden">Добро пожаловать в Седону!</h2>
-      <div class="welcome__wrapper">
-        <img class="welcome__image" src="https://via.placeholder.com/150x150" width="229" height="39" alt="Sedona">
-      </div>
-    </section>
-    <section class="gallery">
-      <h2 class="gallery__heading">Фото и видео</h2>
-      <div class="gallery__photo photo-gallery">
-        <p class="photo-gallery__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут Вам забыть о
-          политике и экономике.</p>
-        <ul class="photo-gallery__list">
-          <li class="photo-gallery__item photo-gallery__item--vastness">
-            <figure class="photo-gallery__figure figure">
-              <a class="figure__fullsize-link" href="#" title="Открыть полноразмерное изображение">
-                <img class="figure__image" src="https://via.placeholder.com/150x150" width="280" height="280"
-                  alt="Восход солнца на фоне гор">
-              </a>
-              <figcaption class="figure__caption">Неродные просторы</figcaption>
-            </figure>
-            <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Борис</cite></p>
-            <div class="photo-gallery__like-counter">
-              <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
-                  лайк</span></button>
-              <span class="photo-gallery__like-quantity">1350</span>
-            </div>
+  <div class="page-body__wrapper">
+    <header class="page-header">
+      <nav class="main-navigation">
+        <a class="main-navigation__logo-link" href="index.html" title="Перейти на главную">
+          <img class="main-navigation__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84"
+            alt="«City of Sedona»">
+        </a>
+        <button class="main-navigation__close-button" type="button">
+          <svg class="main-navigation__open-icon" aria-label="Открыть меню" version="1.0" id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="56px"
+            height="56px" viewBox="-16 -17 56 56" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
+            <g>
+              <rect width="22.928" height="3.964" />
+              <rect y="9.009" width="22.928" height="3.964" />
+              <rect y="18.018" width="22.928" height="3.964" />
+            </g>
+          </svg>
+          <svg class="main-navigation__close-icon visually-hidden" aria-label="Закрыть меню" version="1.0" id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="56px"
+            height="56px" viewBox="-17 -17 56 56" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+            <polygon
+              points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+          </svg>
+        </button>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link button" href="index.html">Главная</a>
           </li>
-          <li class="photo-gallery__item photo-gallery__item--vegetation">
-            <figure class="photo-gallery__figure figure">
-              <a class="figure__fullsize-link" href="#" title="Открыть полноразмерное изображение">
-                <img class="figure__image" src="https://via.placeholder.com/150x150" width="280" height="280"
-                  alt="Кактус">
-              </a>
-              <figcaption class="figure__caption">Местная растительность</figcaption>
-            </figure>
-            <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Сергей</cite></p>
-            <div class="photo-gallery__like-counter">
-              <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
-                  лайк</span></button>
-              <span class="photo-gallery__like-quantity">143</span>
-            </div>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--active button">Фото и
+              видео</a>
           </li>
-          <li class="photo-gallery__item photo-gallery__item--road">
-            <figure class="photo-gallery__figure figure">
-              <a class="figure__fullsize-link" href="#" title="Открыть полноразмерное изображение">
-                <img class="figure__image" src="https://via.placeholder.com/150x150" width="280" height="280"
-                  alt="Дорога в горах, окружённая деревьями">
-              </a>
-              <figcaption class="figure__caption">Дорога на север</figcaption>
-            </figure>
-            <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Пётр</cite></p>
-            <div class="photo-gallery__like-counter">
-              <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
-                  лайк</span></button>
-              <span class="photo-gallery__like-quantity">96</span>
-            </div>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link button" href="form.html">Форма отзыва</a>
           </li>
-          <li class="photo-gallery__item photo-gallery__item--bridge">
-            <figure class="photo-gallery__figure figure">
-              <a class="figure__fullsize-link" href="#" title="Открыть полноразмерное изображение">
-                <img class="figure__image" src="https://via.placeholder.com/150x150" width="280" height="280"
-                  alt="Скала в форме моста">
-              </a>
-              <figcaption class="figure__caption">Мост Дьявола</figcaption>
-            </figure>
-            <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Антон</cite></p>
-            <div class="photo-gallery__like-counter">
-              <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
-                  лайк</span></button>
-              <span class="photo-gallery__like-quantity">254</span>
-            </div>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
-      </div>
-      <div class="gallery__video video-gallery">
-        <p class="video-gallery__question"><b>Всё ещё сомневаетесь?</b></p>
-        <p class="video-gallery__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
-          очередной раз!</p>
-        <div class="video-gallery__player player">
-          <video class="player__video" width="320" height="201" poster="https://via.placeholder.com/150x150"></video>
-          <div class="player__controls">
-            <div class="player__scale-block">
-              <div class="player__scale-controls">
-                <div class="player__scale-fulltime">
-                  <div class="player__scale-cached">
-                    <div class="player__scale-progress"></div>
-                  </div>
-                </div>
-                <div class="player__scale-point"></div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__heading visually-hidden">Галерея Седоны</h1>
+      <section class="welcome">
+        <h2 class="welcome__heading visually-hidden">Добро пожаловать в Седону!</h2>
+        <div class="welcome__wrapper">
+          <img class="welcome__image" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
+        </div>
+      </section>
+      <section class="gallery">
+        <h2 class="gallery__heading">Фото и видео</h2>
+        <div class="gallery__photo photo-gallery">
+          <p class="photo-gallery__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут Вам забыть о
+            политике и экономике.</p>
+          <ul class="photo-gallery__list">
+            <li class="photo-gallery__item photo-gallery__item--vastness">
+              <figure class="photo-gallery__figure figure">
+                <a class="figure__fullsize-link" href="#" title="Открыть полноразмерное изображение">
+                  <img class="figure__image" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280"
+                    alt="Восход солнца на фоне гор">
+                </a>
+                <figcaption class="figure__caption">Неродные просторы</figcaption>
+              </figure>
+              <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Борис</cite></p>
+              <div class="photo-gallery__like-counter">
+                <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
+                    лайк</span></button>
+                <span class="photo-gallery__like-quantity">1350</span>
               </div>
+            </li>
+            <li class="photo-gallery__item photo-gallery__item--vegetation">
+              <figure class="photo-gallery__figure figure">
+                <a class="figure__fullsize-link" href="#" title="Открыть полноразмерное изображение">
+                  <img class="figure__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Кактус">
+                </a>
+                <figcaption class="figure__caption">Местная растительность</figcaption>
+              </figure>
+              <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Сергей</cite></p>
+              <div class="photo-gallery__like-counter">
+                <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
+                    лайк</span></button>
+                <span class="photo-gallery__like-quantity">143</span>
+              </div>
+            </li>
+            <li class="photo-gallery__item photo-gallery__item--road">
+              <figure class="photo-gallery__figure figure">
+                <a class="figure__fullsize-link" href="#" title="Открыть полноразмерное изображение">
+                  <img class="figure__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280"
+                    alt="Дорога в горах, окружённая деревьями">
+                </a>
+                <figcaption class="figure__caption">Дорога на север</figcaption>
+              </figure>
+              <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Пётр</cite></p>
+              <div class="photo-gallery__like-counter">
+                <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
+                    лайк</span></button>
+                <span class="photo-gallery__like-quantity">96</span>
+              </div>
+            </li>
+            <li class="photo-gallery__item photo-gallery__item--bridge">
+              <figure class="photo-gallery__figure figure">
+                <a class="figure__fullsize-link" href="#" title="Открыть полноразмерное изображение">
+                  <img class="figure__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280"
+                    alt="Скала в форме моста">
+                </a>
+                <figcaption class="figure__caption">Мост Дьявола</figcaption>
+              </figure>
+              <p class="photo-gallery__author">Автор фото: <cite class="photo-gallery__author-name">Антон</cite></p>
+              <div class="photo-gallery__like-counter">
+                <button class="photo-gallery__like-button" type="button"><span class="visually-hidden">Поставить
+                    лайк</span></button>
+                <span class="photo-gallery__like-quantity">254</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="gallery__video video-gallery">
+          <p class="video-gallery__question"><b>Всё ещё сомневаетесь?</b></p>
+          <p class="video-gallery__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+            очередной раз!</p>
+          <div class="video-gallery__player player">
+            <video class="player__video" width="320" height="201" poster="img/video-mobile@1x.jpg"></video>
+            <div class="player__controls">
+              <div class="player__scale-block">
+                <div class="player__scale-controls">
+                  <div class="player__scale-fulltime">
+                    <div class="player__scale-cached">
+                      <div class="player__scale-progress"></div>
+                    </div>
+                  </div>
+                  <div class="player__scale-point"></div>
+                </div>
+              </div>
+              <ul class="player__buttons-list">
+                <li class="player__buttons-item">
+                  <button class="player__replay" type="button"><span class="visually-hidden">Воспроизвести
+                      заново</span></button>
+                </li>
+                <li class="player__buttons-item">
+                  <button class="player__subtitles" type="button"><span class="visually-hidden">Включить
+                      субтитры</span></button>
+                </li>
+                <li class="player__buttons-item">
+                  <button class="player__fullscreen" type="button"><span class="visually-hidden">На весь
+                      экран</span></button>
+                </li>
+              </ul>
             </div>
-            <ul class="player__buttons-list">
-              <li class="player__buttons-item">
-                <button class="player__replay" type="button"><span class="visually-hidden">Воспроизвести
-                    заново</span></button>
-              </li>
-              <li class="player__buttons-item">
-                <button class="player__subtitles" type="button"><span class="visually-hidden">Включить
-                    субтитры</span></button>
-              </li>
-              <li class="player__buttons-item">
-                <button class="player__fullscreen" type="button"><span class="visually-hidden">На весь
-                    экран</span></button>
-              </li>
-            </ul>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer class="page-footer">
-    <section class="contacts">
-      <h2 class="contacts__heading visually-hidden">Контакты</h2>
-      <ul class="contacts__list">
-        <li class="contacts__item"><b>#visitsedona</b></li>
-      </ul>
-    </section>
-    <section class="social">
-      <h2 class="social__heading visually-hidden">Социальные сети</h2>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter button" href="#"><span class="visually-hidden">Twitter</span></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook button" href="#"><span
-              class="visually-hidden">Facebook</span></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube button" href="#"><span class="visually-hidden">YouTube</span></a>
-        </li>
-      </ul>
-    </section>
-    <p class="developer">
-      <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
-    </p>
-  </footer>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="contacts">
+        <h2 class="contacts__heading visually-hidden">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item"><b>#visitsedona</b></li>
+        </ul>
+      </section>
+      <section class="social">
+        <h2 class="social__heading visually-hidden">Социальные сети</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter button" href="#"><span
+                class="visually-hidden">Twitter</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook button" href="#"><span
+                class="visually-hidden">Facebook</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube button" href="#"><span
+                class="visually-hidden">YouTube</span></a>
+          </li>
+        </ul>
+      </section>
+      <p class="developer">
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"
+            enable-background="new 0 0 26.943 34.09" xml:space="preserve" aria-label="HTML Academy">
+            <path
+              d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" />
+          </svg>
+        </a>
+      </p>
+    </footer>
+  </div>
 </body>
 
 </html>

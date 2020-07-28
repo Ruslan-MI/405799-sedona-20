@@ -1,0 +1,37 @@
+.other-reasons {
+  background-color: @general-white;
+  color: @general-black;
+  text-align: left;
+}
+
+.other-reasons__list {
+  .list-reset();
+}
+
+.other-reasons__item {
+  padding: 20px;
+  padding-left: 70px;
+
+  &--house::before {
+    content: "";
+  }
+
+  &--souvenirs::before {
+    content: "";
+  }
+
+  &--food::before {
+    content: "";
+  }
+}
+
+.other-reasons__item-heading {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.other-reasons__item-description {
+  margin: 0;
+  color: @dark-text;
+}
