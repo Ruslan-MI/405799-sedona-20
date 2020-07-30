@@ -1,0 +1,74 @@
+.reasons {
+  padding-top: 10px;
+}
+
+.reasons__heading {
+  margin: 0;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: @dark-text;
+}
+
+.reasons__list {
+  .list-reset();
+
+  &::before {
+    content: "";
+    background-image: url("../../img/bg-triangle.svg");
+    background-color: @bright-background;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+  }
+}
+
+.reasons__item {
+  padding: 10px 20px;
+  background-color: @dim-background;
+
+  & .reasons__item-wrapper {
+    border-bottom: 1px solid @reason-border;
+  }
+
+  &:last-child .reasons__item-wrapper {
+    border: none;
+  }
+
+  &--real-city,
+  &--bridge {
+    background-color: @bright-background;
+    padding: 10px 0;
+  }
+}
+
+.reasons__item-heading {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+
+  &--light {
+    color: @general-white;
+  }
+}
+
+.reasons__item-number {
+  color: @dark-text;
+
+  &--light {
+    color: @general-white;
+  }
+}
+
+.reasons__item-description {
+  margin: 0;
+  color: @dark-text;
+
+  &--light {
+    color: @general-white;
+  }
+}
+
+.reasons__item-photo {
+  .img-colors();
+}

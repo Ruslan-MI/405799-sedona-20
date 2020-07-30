@@ -1,0 +1,55 @@
+.photo-gallery__intro {
+  line-height: 24px;
+  color: @dark-text;
+}
+
+.photo-gallery__list {
+  .list-reset();
+}
+
+.photo-gallery__item {
+  text-align: left;
+  padding: 22px 20px 21px;
+  border-top: 1px solid @dim-border;
+
+  &:last-child {
+    border-bottom: 1px solid @dim-border;
+  }
+}
+
+.photo-gallery__author {
+  color: @dark-text;
+  text-transform: none;
+}
+
+.photo-gallery__author-name {
+  font-style: inherit;
+}
+
+.photo-gallery__like-button {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../../img/icon-like.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.3;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 1;
+  }
+}
+
+.photo-gallery__like-quantity {
+  font-weight: 700;
+}

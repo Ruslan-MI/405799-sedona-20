@@ -1,0 +1,31 @@
+.button {
+  background-color: @bright-background;
+  color: @general-white;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: inherit;
+  padding: 10px;
+  border: none;
+  user-select: none;
+
+  a& {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @bright-hover;
+  }
+
+  &:active {
+    background-color: @bright-active;
+    color: @ghost-white;
+  }
+
+  a&:not([href]),
+  &:disabled {
+    background-color: @dim-border;
+    color: @general-white;
+  }
+}
