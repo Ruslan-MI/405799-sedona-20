@@ -1,0 +1,77 @@
+.review__heading {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.review__intro {
+  line-height: 24px;
+  color: @dark-text;
+}
+
+.review-form__wrapper {
+  border-top: 1px solid @dim-border;
+}
+
+.review-form__fieldset {
+  border: none;
+}
+
+.review-form__legend {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.review-form__paragraph {
+  &--phone::after {
+    content: "";
+    display: block;
+    background-color: @icon-background;
+    background-image: url("../../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--email::after {
+    content: "";
+    display: block;
+    background-color: @icon-background;
+    background-image: url("../../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.review-form__label {
+  color: @dark-text;
+
+  &--radio,
+  &--checkbox {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
+  }
+}
+
+.review-form__input,
+.review-form__textarea {
+  font-size: 18px;
+  font-weight: 700;
+  color: inherit;
+  background-color: @body-background;
+  border: 4px solid @full-transparent;
+  outline: none;
+
+  &:hover {
+    background-color: @dim-border;
+  }
+
+  &:focus {
+    background-color: @general-white;
+    border: 4px solid @dim-border;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+}

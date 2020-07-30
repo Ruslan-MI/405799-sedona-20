@@ -1,3 +1,47 @@
+.player__scale-block {
+  padding: 0 22px;
+  box-sizing: border-box;
+  background-color: @general-black;
+  opacity: 0.6;
+  position: relative;
+}
+
+.player__scale-controls {
+  position: absolute;
+  bottom: 0;
+}
+
+.player__scale-fulltime {
+  background-color: @general-white;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.player__scale-point {
+  background-color: @general-white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
 .player__buttons-list {
   .list-reset();
+}
+
+.player__button {
+  border: none;
+  background-color: inherit;
+
+  &:hover .player__button-icon,
+  &:focus .player__button-icon {
+    fill: @dark-text;
+  }
+
+  &:active .player__button-icon {
+    opacity: 0.3;
+  }
 }
