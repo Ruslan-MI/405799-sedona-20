@@ -1,14 +1,37 @@
 .main-navigation {
   position: relative;
+  display: flex;
+  margin-top: 220px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.main-navigation__logo-link {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
 
 .main-navigation__toggle-button {
+  width: 56px;
+  height: 56px;
   border: none;
   padding: 0;
   background-color: inherit;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 
   &::before {
     content: "";
+    width: 100%;
+    height: 100%;
     display: block;
     background-image: url("../../img/icon-menu.svg");
     background-repeat: no-repeat;
@@ -17,6 +40,8 @@
 
   &--cross::before {
     content: "";
+    width: 100%;
+    height: 100%;
     display: block;
     background-image: url("../../img/icon-cross.svg");
     background-repeat: no-repeat;
@@ -35,9 +60,45 @@
 
 .main-navigation__list {
   .list-reset();
+  position: absolute;
+  transform: translateY(-100%);
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    transform: translateY(0);
+    display: flex;
+  }
+}
+
+.main-navigation__item {
+  @media (min-width: @tablet-width) {
+    width: 20%;
+  }
+
+  &:nth-child(3n) {
+    @media (min-width: @tablet-width) {
+      margin-left: auto;
+    }
+  }
 }
 
 .main-navigation__link {
   font-size: 18px;
   box-shadow: inset 0 1px 0 @ghost-white, inset 0 -1px 0 @general-shadow;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 26px;
+    background-color: inherit;
+    color: inherit;
+    box-shadow: none;
+  }
+
+  a&:not([href]) {
+    @media (min-width: @tablet-width) {
+      background-color: inherit;
+      color: inherit;
+    }
+  }
 }
