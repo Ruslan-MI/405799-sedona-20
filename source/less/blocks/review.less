@@ -6,27 +6,28 @@
 .review__intro {
   line-height: 24px;
   color: @dark-text;
+  max-width: 434px;
+  margin: 0 auto;
 }
 
-.review-form__wrapper {
+.review__fieldset-wrapper {
   border-top: 1px solid @dim-border;
+  padding: 0 20px;
 }
 
-.review-form__fieldset {
+.review__fieldset {
   border: none;
   margin: 0;
+  padding: 0;
 }
 
-.review-form__legend {
+.review__legend {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 }
 
-.review-form__paragraph {
-  text-align: left;
-  display: flex;
-
+.review__paragraph {
   &--phone::after {
     content: "";
     display: block;
@@ -44,9 +45,15 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+  .review__fieldset--introduce &,
+  .review__fieldset--impression &,
+  .review__fieldset--attractions & {
+    display: flex;
+  }
 }
 
-.review-form__label {
+.review__label {
   color: @dark-text;
 
   &--radio,
@@ -57,14 +64,32 @@
   }
 }
 
-.review-form__input,
-.review-form__textarea {
+.review__input {
+  .review__fieldset--introduce & {
+    width: 100%;
+    margin-left: 5px;
+    flex-grow: 1;
+  }
+
+  .review__fieldset--contacts & {
+    width: 100%;
+  }
+}
+
+.review__textarea {
+  width: 100%;
+}
+
+.review__input,
+.review__textarea {
   font-size: 18px;
   font-weight: 700;
   color: inherit;
   background-color: @body-background;
   border: 4px solid @full-transparent;
   outline: none;
+  box-sizing: border-box;
+  padding: 0;
 
   &:hover {
     background-color: @dim-border;
@@ -77,5 +102,88 @@
 
   &::placeholder {
     color: inherit;
+  }
+}
+
+.review__warning {
+  display: none;
+}
+
+.review__submit-button {
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .review__form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
+
+  .review__fieldset-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+
+    &--introduce {
+      width: 50%;
+    }
+
+    &--impression {
+      order: -1;
+      width: 50%;
+    }
+  }
+
+  .review__attractions-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .review__paragraph {
+    .review__fieldset--attractions & {
+      width: 50%;
+    }
+  }
+
+  .review__bottom-wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  .review__warning {
+    display: block;
+    order: 1;
+    color: @dark-text;
+  }
+
+  .review__submit-button {
+    width: 50%;
+    margin: 0;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review__wrapper-contacts {
+    display: flex;
+  }
+
+  .review__paragraph {
+    .review__fieldset--contacts & {
+      width: 50%;
+      display: flex;
+    }
+
+    .review__fieldset--attractions & {
+      width: 25%;
+    }
+  }
+
+  .review__input {
+    .review__fieldset--contacts & {
+      flex-grow: 1;
+    }
   }
 }
