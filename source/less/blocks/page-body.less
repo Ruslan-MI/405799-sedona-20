@@ -1,0 +1,17 @@
+.page-body__container {
+  min-width: 320px;
+  max-width: @mobile-container;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-body__container {
+    max-width: @tablet-container;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-body__container {
+    max-width: @desktop-container;
+  }
+}

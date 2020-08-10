@@ -1,4 +1,11 @@
 .page-footer {
   background-color: @general-white;
   padding: 30px 85px 26px;
+  display: grid;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
