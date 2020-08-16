@@ -14,28 +14,30 @@
 
   <div class="page-body__container">
     <header class="page-header">
-      <nav class="main-navigation">
-        <a class="main-navigation__logo-link" title="Вы находитесь на главной странице">
-          <img class="main-navigation__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84"
-            alt="«City of Sedona»">
-        </a>
-        <button class="main-navigation__toggle-button" type="button">
-          <span class="visually-hidden">Открыть/закрыть меню</span>
-        </button>
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--active button">Главная</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link button" href="photo.html">Фото и видео</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link button" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </li>
-        </ul>
+      <nav class="main-navigation main-navigation--closed">
+        <div class="main-navigation__wrapper">
+          <a class="main-navigation__logo-link" title="Вы находитесь на главной странице">
+            <img class="main-navigation__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84"
+              alt="«City of Sedona»">
+          </a>
+          <button class="main-navigation__toggle-button" type="button">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--active button">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link button" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link button" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="page-main">
@@ -53,10 +55,11 @@
         <ol class="reasons__list reasons__list--with-photo">
           <li class="reasons__item reasons__item--real-city">
             <div class="reasons__item-wrapper">
-              <div class="reasons__text-wrapper">
-                <h3 class="reasons__item-heading reasons__item-heading--light">Настоящий городок</h3>
-                <span class="reasons__item-number reasons__item-number--light">— №1 —</span>
-                <p class="reasons__item-description reasons__item-description--light">Седона - не аттракцион для
+              <div class="reasons__text-wrapper reasons__text-wrapper--with-photo">
+                <h3 class="reasons__item-heading reasons__item-heading--with-photo">Настоящий <br>
+                  городок</h3>
+                <p class="reasons__item-number reasons__item-number--with-photo">— №1 —</p>
+                <p class="reasons__item-description reasons__item-description--with-photo">Седона - не аттракцион для
                   туристов, там течёт своя жизнь</p>
               </div>
               <img class="reasons__item-photo" src="img/main-city-mobile@1x.jpg" width="320" height="260"
@@ -66,23 +69,26 @@
             <div class="reasons reasons--other">
               <h3 class="reasons__heading visually-hidden">А ещё...</h3>
               <ul class="reasons__list reasons__list--other">
-                <li class="reasons__item reasons__item--house">
+                <li class="reasons__item reasons__item--other reasons__item--house">
                   <div class="reasons__text-wrapper reasons__text-wrapper--other">
-                    <h4 class="reasons__item-heading">Жильё</h4>
-                    <p class="reasons__item-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!
+                    <h4 class="reasons__item-heading reasons__item-heading--other">Жильё</h4>
+                    <p class="reasons__item-description reasons__item-description--other">Рекомендуем пожить в настоящем
+                      мотеле, всё как в кино!
                     </p>
                   </div>
                 </li>
-                <li class="reasons__item reasons__item--souvenirs">
+                <li class="reasons__item reasons__item--other reasons__item--souvenirs">
                   <div class="reasons__text-wrapper reasons__text-wrapper--other">
-                    <h4 class="reasons__item-heading">Сувениры</h4>
-                    <p class="reasons__item-description">Не только китайского, но и местного производства!</p>
+                    <h4 class="reasons__item-heading reasons__item-heading--other">Сувениры</h4>
+                    <p class="reasons__item-description reasons__item-description--other">Не только китайского, <br>
+                      но и местного производства!</p>
                   </div>
                 </li>
-                <li class="reasons__item reasons__item--food">
+                <li class="reasons__item reasons__item--other reasons__item--food">
                   <div class="reasons__text-wrapper reasons__text-wrapper--other">
-                    <h4 class="reasons__item-heading">Еда</h4>
-                    <p class="reasons__item-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                    <h4 class="reasons__item-heading reasons__item-heading--other">Еда</h4>
+                    <p class="reasons__item-description reasons__item-description--other">Всегда заказывайте фирменный
+                      бургер, вы не разочаруетесь!
                     </p>
                   </div>
                 </li>
@@ -92,10 +98,12 @@
           </li>
           <li class="reasons__item reasons__item--bridge">
             <div class="reasons__item-wrapper">
-              <div class="reasons__text-wrapper">
-                <h3 class="reasons__item-heading reasons__item-heading--light">Там есть Мост Дьявола</h3>
-                <span class="reasons__item-number reasons__item-number--light">— №2 —</span>
-                <p class="reasons__item-description reasons__item-description--light">Да, по нему можно пройти! Если вы
+              <div class="reasons__text-wrapper reasons__text-wrapper--with-photo">
+                <h3 class="reasons__item-heading reasons__item-heading--with-photo">Там есть <br>
+                  Мост Дьявола</h3>
+                <p class="reasons__item-number reasons__item-number--with-photo">— №2 —</p>
+                <p class="reasons__item-description reasons__item-description--with-photo">Да, по нему можно пройти!
+                  Если вы
                   осмелитесь, конечно</p>
               </div>
               <img class="reasons__item-photo" src="img/main-bridge-mobile@1x.jpg" width="320" height="260"
@@ -105,24 +113,30 @@
         </ol>
         <ol class="reasons__list reasons__list--without-photo" start="3">
           <li class="reasons__item reasons__item--without-photo reasons__item--small-area">
-            <div class="reasons__text-wrapper">
-              <h3 class="reasons__item-heading">Небольшая площадь</h3>
-              <span class="reasons__item-number">— №3 —</span>
-              <p class="reasons__item-description">Все интересные места находятся очень близко</p>
+            <div class="reasons__text-wrapper reasons__text-wrapper--without-photo">
+              <h3 class="reasons__item-heading reasons__item-heading--without-photo">Небольшая <br>
+                площадь</h3>
+              <p class="reasons__item-number reasons__item-number--without-photo">— №3 —</p>
+              <p class="reasons__item-description reasons__item-description--without-photo">Все интересные места
+                находятся очень близко</p>
             </div>
           </li>
           <li class="reasons__item reasons__item--without-photo reasons__item--beautiful-road">
-            <div class="reasons__text-wrapper">
-              <h3 class="reasons__item-heading">Красивая дорога</h3>
-              <span class="reasons__item-number">— №4 —</span>
-              <p class="reasons__item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <div class="reasons__text-wrapper reasons__text-wrapper--without-photo">
+              <h3 class="reasons__item-heading reasons__item-heading--without-photo">Красивая <br>
+                дорога</h3>
+              <p class="reasons__item-number reasons__item-number--without-photo">— №4 —</p>
+              <p class="reasons__item-description reasons__item-description--without-photo">Ехать в Седону из Лас-Вегаса
+                совсем не скучно!</p>
             </div>
           </li>
           <li class="reasons__item reasons__item--without-photo reasons__item--few-tourists">
-            <div class="reasons__text-wrapper">
-              <h3 class="reasons__item-heading">Мало туристов</h3>
-              <span class="reasons__item-number">— №5 —</span>
-              <p class="reasons__item-description">Большинство едет в Гранд-Каньон и толпится там</p>
+            <div class="reasons__text-wrapper reasons__text-wrapper--without-photo">
+              <h3 class="reasons__item-heading reasons__item-heading--without-photo">Мало <br>
+                туристов</h3>
+              <p class="reasons__item-number reasons__item-number--without-photo">— №5 —</p>
+              <p class="reasons__item-description reasons__item-description--without-photo">Большинство едет в
+                Гранд-Каньон и толпится там</p>
             </div>
           </li>
         </ol>
@@ -133,8 +147,8 @@
           <p class="search__question">
             <b>Заинтересовались?</b>
           </p>
-          <p class="search__intro">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в
-            Седоне</p>
+          <p class="search__intro">Укажите предполагаемые даты поездки, <br>
+            и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
           <a class="search__link button" href="#">Найти гостиницу</a>
         </div>
         <div class="search__map">
