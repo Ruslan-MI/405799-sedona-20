@@ -1,5 +1,5 @@
 .welcome {
-  padding-bottom: 15px;
+  padding-bottom: 14px;
 }
 
 .welcome__wrapper {
@@ -11,6 +11,7 @@
   box-sizing: border-box;
   position: relative;
   padding-top: 52px;
+  height: 158px;
 
   &--index {
     padding-top: 90px;
@@ -35,13 +36,22 @@
   line-height: 26px;
   font-weight: 700;
   margin: 0;
-  padding: 32px 24px 0;
+  padding: 33px 24px 0;
 }
 
 @media (min-width: @tablet-width) {
+  .welcome {
+    padding-bottom: 30px;
+
+    &--index {
+      padding-bottom: 15px;
+    }
+  }
+
   .welcome__wrapper {
     background-image: url("../../img/bg-back-tablet@1x.jpg");
-    padding-top: 52px;
+    padding-top: 96px;
+    height: 290px;
 
     &--index {
       padding-top: 77px;
@@ -56,18 +66,30 @@
 
   .welcome__description {
     font-size: 21px;
-    padding: 44px 75px 0;
+    padding: 0;
+    padding-top: 44px;
+    width: 500px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .welcome__wrapper {
+    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    padding-top: 103px;
+    height: 301px;
+
+    &--index {
+      padding-top: 77px;
+      height: 518px;
+    }
+
     &::after {
       background-image: url("../../img/bg-intro-triangle-desktop.svg");
     }
   }
 
   .welcome__description {
-    padding: 55px 291px 0;
+    padding-top: 56px;
   }
 }

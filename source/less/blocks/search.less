@@ -39,21 +39,25 @@
 
 @media (min-width: @tablet-width) {
   .search__text-wrapper {
-    padding: 58px 20px 58px;
-    // max-width: 458px;
-    // margin: 0 auto;
+    padding: 58px 20px;
   }
 
   .search__question {
     font-size: 30px;
-    // margin: 0;
     padding: 0 0 36px;
   }
 
   .search__intro {
-    // line-height: 24px;
-    // color: @dark-text;
-    // margin: 0;
     padding: 0 0 39px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search__intro {
+    padding: 0 0 44px;
+  }
+
+  .search__text-wrapper {
+    padding: 58px 20px 66px;
   }
 }
