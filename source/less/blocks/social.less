@@ -1,10 +1,12 @@
 .social {
-  display: flex;
+  padding: 0 0 28px;
 }
 
 .social__list {
   .list-reset();
+  width: 151px;
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -45,5 +47,11 @@
 
   &:active::before {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    padding: 0;
   }
 }

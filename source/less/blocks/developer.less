@@ -1,5 +1,11 @@
+.developer {
+  margin: 0;
+}
+
 .developer__link {
   color: inherit;
+  position: relative;
+  left: -4px;
 
   &:hover .developer__link-logo,
   &:active .developer__link-logo {
@@ -9,5 +15,23 @@
   &:active .developer__link-logo {
     fill: @general-black;
     opacity: 0.3;
+  }
+}
+
+.developer__link-logo {
+  position: relative;
+  top: 12px;
+  left: 8px;
+}
+
+@media (min-width: @tablet-width) {
+  .developer {
+    text-align: right;
+    padding: 0;
+  }
+
+  .developer__link {
+    top: -5px;
+    left: -8px;
   }
 }

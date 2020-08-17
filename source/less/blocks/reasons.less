@@ -1,30 +1,29 @@
+.reasons {
+  padding-top: 15px;
+
+  &--other {
+    background-color: @general-white;
+    padding: 25px 0 19px;
+  }
+}
+
 .reasons__heading {
   margin: 0;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   color: @dark-text;
+  padding: 0 9px 13px;
 }
 
 .reasons__list {
   .list-reset();
 
-  &--with-photo::before {
-    content: "";
-    background-image: url("../../img/bg-triangle.svg");
-    background-color: @bright-background;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-  }
-
   &--with-photo {
-    padding-top: 52px;
     background-color: @bright-background;
   }
 
   &--other {
-    background-color: @general-white;
     text-align: left;
   }
 
@@ -34,41 +33,111 @@
 }
 
 .reasons__item {
-  &--without-photo {
-    padding: 0 20px;
+  &--other {
+    position: relative;
+  }
+
+  &--house::before {
+    content: "";
+    width: 39px;
+    height: 37px;
+    background-image: url("../../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    background-size: cover;
+    top: 1px;
+    left: 21px;
+  }
+
+  &--souvenirs::before {
+    content: "";
+    width: 32px;
+    height: 38px;
+    background-image: url("../../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    background-size: cover;
+    top: -1px;
+    left: 25px;
+  }
+
+  &--food::before {
+    content: "";
+    width: 40px;
+    height: 35px;
+    background-image: url("../../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    background-size: cover;
+    top: 5px;
+    left: 18px;
   }
 }
 
 .reasons__text-wrapper {
-  padding: 10px;
+  &--with-photo {
+    padding: 34px 10px 39px;
+  }
+
+  .reasons__item--bridge & {
+    padding: 39px 10px 35px;
+  }
 
   &--other {
-    padding-left: 70px;
+    padding: 10px 19px 16px 70px;
   }
 
-  .reasons__item--without-photo & {
-    border-bottom: 1px solid @reason-border;
-  }
-
-  .reasons__item--without-photo:last-child & {
-    border: none;
+  &--without-photo {
+    padding: 26px 12px 24px;
   }
 }
 
 .reasons__item-heading {
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
 
-  &--light {
+  &--with-photo {
     color: @general-white;
+    padding-bottom: 11px;
   }
+
+  &--other {
+    padding-bottom: 16px;
+  }
+
+  &--without-photo {
+    padding-bottom: 11px;
+  }
+}
+
+.reasons__item-number {
+  margin: 0;
+
+  &--with-photo {
+    padding-bottom: 17px;
+  }
+
+  &--without-photo {
+    padding-bottom: 17px;
+  }
+}
+
+.reasons__item-description {
+  margin: 0;
 }
 
 .reasons__item-number,
 .reasons__item-description {
   color: @dark-text;
 
-  &--light {
+  &--with-photo {
     color: @general-white;
   }
 }
@@ -81,10 +150,63 @@
   object-fit: cover;
 }
 
+@media (max-width: @mobile-width) {
+  .reasons__list {
+    &--with-photo::before {
+      content: "";
+      width: 100%;
+      height: 37px;
+      background-image: url("../../img/bg-triangle.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      position: relative;
+    }
+  }
+
+  .reasons__item {
+    &--without-photo {
+      padding: 0 20px;
+    }
+  }
+
+  .reasons__text-wrapper {
+    &--without-photo {
+      border-bottom: 1px solid @reason-border;
+    }
+
+    .reasons__item--without-photo:last-child & {
+      border: none;
+    }
+  }
+
+  .reasons__item-heading br {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .reasons {
+    &--other {
+      padding: 0;
+    }
+  }
+
+  .reasons__heading {
+    padding: 0 0 54px;
+  }
+
   .reasons__list {
     &--with-photo {
       padding-top: 0;
+    }
+
+    &--other {
+      padding-bottom: 60px;
+    }
+
+    &--without-photo {
+      padding: 42px 0 42px;
     }
 
     &--other,
@@ -94,24 +216,94 @@
     }
   }
 
+  .reasons__item {
+    &--souvenirs {
+      order: 1;
+    }
+
+    &--house::before {
+      width: 75px;
+      height: 72px;
+      top: 132px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+
+    &--souvenirs::before {
+      width: 64px;
+      height: 75px;
+      top: 132px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+
+    &--food::before {
+      width: 76px;
+      height: 68px;
+      top: 132px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+  }
+
   .reasons__item-wrapper {
     display: flex;
   }
 
   .reasons__text-wrapper {
-    .reasons__item-wrapper > & {
+    &--with-photo {
       box-sizing: border-box;
       width: 33.333333%;
+      padding: 40px 20px 15px;
+    }
+
+    .reasons__item--bridge & {
+      padding: 43px 43px 15px;
     }
 
     &--other {
-      padding: 10px;
-      padding-top: 158px;
+      padding: 158px 31px 0;
       text-align: center;
     }
 
-    .reasons__item--without-photo & {
-      border: none;
+    .reasons__item--food & {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    &--without-photo {
+      padding: 0 38px 0;
+    }
+
+    .reasons__item--beautiful-road & {
+      padding-left: 54px;
+      padding-right: 54px;
+    }
+  }
+
+  .reasons__item-heading {
+    font-size: 21px;
+
+    &--with-photo {
+      padding-bottom: 13px;
+    }
+
+    &--other {
+      padding-bottom: 23px;
+    }
+
+    &--without-photo {
+      padding-bottom: 13px;
+    }
+  }
+
+  .reasons__item-number {
+    &--with-photo {
+      padding-bottom: 23px;
+    }
+
+    &--without-photo {
+      padding-bottom: 23px;
     }
   }
 
@@ -122,5 +314,50 @@
     .reasons__item--bridge & {
       order: -1;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reasons__heading {
+    padding: 0 0 42px;
+  }
+
+  .reasons__list {
+    &--other {
+      padding-bottom: 81px;
+    }
+
+    &--without-photo {
+      padding-bottom: 63px;
+    }
+  }
+
+  .reasons__text-wrapper {
+    &--with-photo {
+      padding: 47px 52px 15px;
+    }
+
+    .reasons__item--bridge & {
+      padding: 51px 83px 15px;
+    }
+
+    &--other {
+      padding: 158px 46px 0;
+    }
+
+    &--without-photo {
+      padding: 0 35px 0;
+    }
+
+    .reasons__item--beautiful-road & {
+      padding-left: 62px;
+      padding-right: 62px;
+    }
+  }
+}
+
+@media (max-width: @desktop-width) {
+  .reasons__item--souvenirs br {
+    display: none;
   }
 }
