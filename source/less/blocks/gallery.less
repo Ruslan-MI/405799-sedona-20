@@ -1,5 +1,6 @@
 .gallery {
   padding-top: 20px;
+  padding-bottom: 39px;
 }
 
 .gallery__heading {
@@ -62,7 +63,7 @@
   color: @dark-text;
   text-transform: none;
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
 }
 
 .gallery__author-name {
@@ -77,34 +78,19 @@
   background-color: inherit;
   position: relative;
   top: 2px;
+}
 
-  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../img/icon-like.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    opacity: 0.3;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    opacity: 0.6;
-  }
-
-  &:active::before {
-    opacity: 1;
-  }
+.gallery__like-icon {
+  opacity: 0.3;
 }
 
 .gallery__like-quantity {
   font-weight: 700;
-  padding-left: 10px;
+  position: relative;
+  left: 10px;
 }
 
-.gallery__video {
+.gallery__video-block {
   padding-top: 32px;
 }
 
@@ -117,7 +103,7 @@
 
 @media (min-width: @tablet-width) {
   .gallery {
-    padding: 35px 60px 0;
+    padding: 35px 60px 40px;
   }
 
   .gallery__heading {
@@ -190,10 +176,11 @@
   }
 
   .gallery__like-quantity {
-    padding-left: 6px;
+    left: 6px;
+    top: 1px;
   }
 
-  .gallery__video {
+  .gallery__video-block {
     padding-top: 57px;
   }
 
@@ -205,12 +192,16 @@
 
 @media (min-width: @desktop-width) {
   .gallery {
-    padding: 72px 0 0;
+    padding: 72px 0 85px;
   }
 
   .gallery__intro {
     &--photo {
       padding-bottom: 80px;
+    }
+
+    &--video {
+      padding-bottom: 78px;
     }
   }
 
@@ -229,6 +220,7 @@
     box-sizing: border-box;
     background-color: fade(@general-black, 30%);
     color: @general-white;
+    padding-left: 21px;
 
     .gallery__item:nth-child(3n) & {
       background-color: fade(@general-black, 30%);
@@ -239,7 +231,28 @@
     color: inherit;
   }
 
-  .gallery__video {
+  .gallery__like-button {
+    top: 4px;
+  }
+
+  .gallery__like-icon {
+    opacity: 1;
+
+    .gallery__like-button:hover &,
+    .gallery__like-button:focus & {
+      opacity: 0.6;
+    }
+
+    .gallery__like-button:active & {
+      opacity: 0.3;
+    }
+
+    & path {
+      fill: @general-white;
+    }
+  }
+
+  .gallery__video-block {
     padding-top: 61px;
   }
 }
