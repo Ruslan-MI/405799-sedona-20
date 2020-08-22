@@ -54,101 +54,91 @@
         <p class="review__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых Вами
           достопримечательностях</p>
         <form class="review__form" action="https://echo.htmlacademy.ru" method="POST">
-          <div class="review__fieldset-wrapper review__fieldset-wrapper--introduce">
-            <fieldset class="review__fieldset review__fieldset--introduce">
-              <legend class="review__legend review__legend--introduce">Представьтесь:</legend>
-              <p class="review__paragraph review__paragraph--introduce">
-                <label class="review__label review__label--introduce" for="name">Имя*:</label>
-                <input class="review__input review__input--introduce review__input--name" type="text" name="name"
-                  id="name" placeholder="Пётр" pattern="[А-Яа-яЁ-ё]{1,}" required>
+          <fieldset class="review__fieldset review__fieldset--introduce">
+            <legend class="review__legend review__legend--introduce">Представьтесь:</legend>
+            <p class="review__paragraph review__paragraph--introduce">
+              <label class="review__label review__label--introduce" for="name">Имя*:</label>
+              <input class="review__input review__input--introduce review__input--name" type="text" name="name"
+                id="name" placeholder="Пётр" pattern="[А-Яа-яЁ-ё]{1,}" required>
+            </p>
+            <p class="review__paragraph review__paragraph--introduce">
+              <label class="review__label review__label--introduce" for="surname">Фамилия*:</label>
+              <input class="review__input review__input--introduce review__input--surname" type="text" name="surname"
+                id="surname" placeholder="Иванов" pattern="[А-Яа-яЁ-ё]{1,}" required>
+            </p>
+            <p class="review__paragraph review__paragraph--introduce">
+              <label class="review__label review__label--introduce" for="patronymic">Отчество:</label>
+              <input class="review__input review__input--introduce review__input--patronymic" type="text"
+                name="patronymic" id="patronymic" placeholder="Александрович" pattern="[А-Яа-яЁ-ё]{1,}">
+            </p>
+          </fieldset>
+          <fieldset class="review__fieldset review__fieldset--contacts">
+            <legend class="review__legend review__legend--contacts">Контактная информация:</legend>
+            <div class="review__contacts-wrapper">
+              <p class="review__paragraph review__paragraph--contacts review__paragraph--phone">
+                <label class="review__label review__label--contacts review__label--phone" for="phone"><span>Контактный
+                  </span>телефон*:</label>
+                <input class="review__input review__input--contacts" type="tel" name="phone" id="phone"
+                  placeholder="Введите телефон" pattern="\+7[0-9]{10}" title="Укажите номер в формате «+7xxxxxxxxxx»"
+                  required>
               </p>
-              <p class="review__paragraph review__paragraph--introduce">
-                <label class="review__label review__label--introduce" for="surname">Фамилия*:</label>
-                <input class="review__input review__input--introduce review__input--surname" type="text" name="surname"
-                  id="surname" placeholder="Иванов" pattern="[А-Яа-яЁ-ё]{1,}" required>
+              <p class="review__paragraph review__paragraph--contacts review__paragraph--email">
+                <label class="review__label review__label--contacts review__label--email" for="email">Электронная
+                  почта*:</label>
+                <input class="review__input review__input--contacts" type="email" name="email" id="email"
+                  placeholder="Введите e-mail" required>
               </p>
-              <p class="review__paragraph review__paragraph--introduce">
-                <label class="review__label review__label--introduce" for="patronymic">Отчество:</label>
-                <input class="review__input review__input--introduce review__input--patronymic" type="text"
-                  name="patronymic" id="patronymic" placeholder="Александрович" pattern="[А-Яа-яЁ-ё]{1,}">
+            </div>
+          </fieldset>
+          <fieldset class="review__fieldset review__fieldset--impression">
+            <legend class="review__legend review__legend--impression">Ваше общее впечатление:</legend>
+            <p class="review__paragraph review__paragraph--impression">
+              <input class="review__input review__input--impression visually-hidden" type="radio" name="impression"
+                id="good" value="good" checked>
+              <label class="review__label review__label--impression" for="good">Скорее положительное</label>
+            </p>
+            <p class="review__paragraph review__paragraph--impression">
+              <input class="review__input review__input--impression visually-hidden" type="radio" name="impression"
+                id="bad" value="bad">
+              <label class="review__label review__label--impression" for="bad">Скорее отрицательное</label>
+            </p>
+            <p class="review__paragraph review__paragraph--impression">
+              <input class="review__input review__input--impression visually-hidden" type="radio" name="impression"
+                id="difficult" value="difficult">
+              <label class="review__label review__label--impression" for="difficult">Затрудняюсь ответить</label>
+            </p>
+          </fieldset>
+          <fieldset class="review__fieldset review__fieldset--attractions">
+            <legend class="review__legend review__legend--attractions">Посещённые <br>
+              достопримечательности:</legend>
+            <div class="review__attractions-wrapper">
+              <p class="review__paragraph review__paragraph--attractions">
+                <input class="review__input review__input--attractions visually-hidden" type="checkbox" name="bridge"
+                  id="bridge" checked>
+                <label class="review__label review__label--attractions" for="bridge">Мост Дьявола</label>
               </p>
-            </fieldset>
-          </div>
-          <div class="review__fieldset-wrapper review__fieldset-wrapper--contacts">
-            <fieldset class="review__fieldset review__fieldset--contacts">
-              <legend class="review__legend review__legend--contacts">Контактная информация:</legend>
-              <div class="review__contacts-wrapper">
-                <p class="review__paragraph review__paragraph--contacts review__paragraph--phone">
-                  <label class="review__label review__label--contacts review__label--phone" for="phone"><span>Контактный</span>
-                    телефон*:</label>
-                  <input class="review__input review__input--contacts" type="tel" name="phone" id="phone"
-                    placeholder="Введите телефон" pattern="\+7[0-9]{10}" title="Укажите номер в формате «+7xxxxxxxxxx»"
-                    required>
-                </p>
-                <p class="review__paragraph review__paragraph--contacts review__paragraph--email">
-                  <label class="review__label review__label--contacts review__label--email" for="email">Электронная
-                    почта*:</label>
-                  <input class="review__input review__input--contacts" type="email" name="email" id="email"
-                    placeholder="Введите e-mail" required>
-                </p>
-              </div>
-            </fieldset>
-          </div>
-          <div class="review__fieldset-wrapper review__fieldset-wrapper--impression">
-            <fieldset class="review__fieldset review__fieldset--impression">
-              <legend class="review__legend review__legend--impression">Ваше общее впечатление:</legend>
-              <p class="review__paragraph review__paragraph--impression">
-                <input class="review__input review__input--impression visually-hidden" type="radio" name="impression"
-                  id="good" value="good" checked>
-                <label class="review__label review__label--impression" for="good">Скорее положительное</label>
+              <p class="review__paragraph review__paragraph--attractions">
+                <input class="review__input review__input--attractions visually-hidden" type="checkbox" name="bell"
+                  id="bell" checked>
+                <label class="review__label review__label--attractions" for="bell">Гора-Колокол</label>
               </p>
-              <p class="review__paragraph review__paragraph--impression">
-                <input class="review__input review__input--impression visually-hidden" type="radio" name="impression"
-                  id="bad" value="bad">
-                <label class="review__label review__label--impression" for="bad">Скорее отрицательное</label>
+              <p class="review__paragraph review__paragraph--attractions">
+                <input class="review__input review__input--attractions visually-hidden" type="checkbox" name="park"
+                  id="park" checked>
+                <label class="review__label review__label--attractions" for="park">Слайд-парк</label>
               </p>
-              <p class="review__paragraph review__paragraph--impression">
-                <input class="review__input review__input--impression visually-hidden" type="radio" name="impression"
-                  id="difficult" value="difficult">
-                <label class="review__label review__label--impression" for="difficult">Затрудняюсь ответить</label>
+              <p class="review__paragraph review__paragraph--attractions">
+                <input class="review__input review__input--attractions visually-hidden" type="checkbox" name="rocks"
+                  id="rocks">
+                <label class="review__label review__label--attractions" for="rocks">Красные скалы</label>
               </p>
-            </fieldset>
-          </div>
-          <div class="review__fieldset-wrapper review__fieldset-wrapper--attractions">
-            <fieldset class="review__fieldset review__fieldset--attractions">
-              <legend class="review__legend review__legend--attractions">Посещённые <br>
-                достопримечательности:</legend>
-              <div class="review__attractions-wrapper">
-                <p class="review__paragraph review__paragraph--attractions">
-                  <input class="review__input review__input--attractions visually-hidden" type="checkbox" name="bridge"
-                    id="bridge" checked>
-                  <label class="review__label review__label--attractions" for="bridge">Мост Дьявола</label>
-                </p>
-                <p class="review__paragraph review__paragraph--attractions">
-                  <input class="review__input review__input--attractions visually-hidden" type="checkbox" name="bell"
-                    id="bell" checked>
-                  <label class="review__label review__label--attractions" for="bell">Гора-Колокол</label>
-                </p>
-                <p class="review__paragraph review__paragraph--attractions">
-                  <input class="review__input review__input--attractions visually-hidden" type="checkbox" name="park"
-                    id="park" checked>
-                  <label class="review__label review__label--attractions" for="park">Слайд-парк</label>
-                </p>
-                <p class="review__paragraph review__paragraph--attractions">
-                  <input class="review__input review__input--attractions visually-hidden" type="checkbox" name="rocks"
-                    id="rocks">
-                  <label class="review__label review__label--attractions" for="rocks">Красные скалы</label>
-                </p>
-              </div>
-            </fieldset>
-          </div>
-          <div class="review__fieldset-wrapper review__fieldset-wrapper--emotions">
-            <fieldset class="review__fieldset review__fieldset--emotions">
-              <legend class="review__legend review__legend--emotions">Опишите свои эмоции:</legend>
-              <textarea class="review__textarea" name="emotion" id="emotion" cols="30" rows="6"
-                placeholder="Опишите подробно все свои восторги"></textarea>
-            </fieldset>
-          </div>
+            </div>
+          </fieldset>
+          <fieldset class="review__fieldset review__fieldset--emotions">
+            <legend class="review__legend review__legend--emotions">Опишите свои эмоции:</legend>
+            <textarea class="review__textarea" name="emotion" id="emotion" cols="30" rows="6"
+              placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
           <div class="review__bottom-wrapper">
             <p class="review__warning">* — обязательные поля</p>
             <button class="review__submit-button button" type="submit">Отправить отзыв</button>

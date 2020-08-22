@@ -17,15 +17,10 @@
   padding-bottom: 17px;
 }
 
-.review__fieldset-wrapper {
-  border-top: 1px solid @dim-border;
-  padding: 0 20px;
-}
-
 .review__fieldset {
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 
   &--introduce {
     padding-bottom: 5px;
@@ -52,11 +47,11 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  padding-top: 20px;
+  padding-top: 21px;
   padding-bottom: 19px;
 
   &--attractions {
-    padding-top: 15px;
+    padding-top: 16px;
     padding-bottom: 20px;
   }
 
@@ -276,6 +271,7 @@
   height: 160px;
   padding: 9px 16px;
   line-height: 26px;
+  resize: none;
 }
 
 .review__bottom-wrapper {
@@ -293,6 +289,23 @@
   padding-bottom: 12px;
 }
 
+@media (max-width: @mobile-width) {
+  .review__fieldset {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: @dim-border;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .review {
     padding-top: 32px;
@@ -304,7 +317,7 @@
   }
 
   .review__intro {
-    padding-bottom: 67px;
+    padding-bottom: 66px;
   }
 
   .review__form {
@@ -313,7 +326,7 @@
     padding: 0 60px;
   }
 
-  .review__fieldset-wrapper {
+  .review__fieldset {
     width: 100%;
     box-sizing: border-box;
     border: none;
@@ -336,19 +349,18 @@
       left: -1px;
     }
 
+    &--contacts {
+      padding-bottom: 12px;
+    }
+
     &--impression {
+      padding-bottom: 32px;
       order: -1;
       width: 50%;
     }
-  }
-
-  .review__fieldset {
-    &--impression {
-      padding-bottom: 33px;
-    }
 
     &--attractions {
-      padding-bottom: 19px;
+      padding-bottom: 18px;
     }
 
     &--emotions {
@@ -527,37 +539,36 @@
   }
 
   .review__intro {
-    padding-bottom: 39px;
+    padding-bottom: 38px;
   }
 
   .review__form {
     padding: 0 120px;
   }
 
-  .review__fieldset-wrapper {
+  .review__fieldset {
     &--introduce {
       padding-left: 80px;
     }
 
-    &--impression {
-      padding-left: 4px;
-      padding-right: 52px;
+    &--introduce::before {
+      left: 0;
     }
-  }
 
-  .review__fieldset {
     &--impression {
-      padding-bottom: 31px;
+      padding-bottom: 30px;
+      padding-left: 4px;
     }
 
     &--attractions {
-      padding-bottom: 17px;
+      padding-bottom: 16px;
+      padding-right: 3px;
     }
   }
 
   .review__legend {
     &--impression {
-      text-align: center;
+      padding-left: 76px;
     }
 
     &--contacts {
