@@ -129,10 +129,6 @@
   }
 }
 
-.reasons__item-description {
-  margin: 0;
-}
-
 .reasons__item-number,
 .reasons__item-description {
   color: @dark-text;
@@ -140,6 +136,10 @@
   &--with-photo {
     color: @general-white;
   }
+}
+
+.reasons__item-description {
+  margin: 0;
 }
 
 .reasons__item-photo {
@@ -201,18 +201,18 @@
       padding-top: 0;
     }
 
+    &--other,
+    &--without-photo {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
     &--other {
       padding-bottom: 60px;
     }
 
     &--without-photo {
       padding: 42px 0 42px;
-    }
-
-    &--other,
-    &--without-photo {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 

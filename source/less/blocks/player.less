@@ -88,6 +88,12 @@
   .player__button:active & {
     opacity: 0.3;
   }
+
+  .player__button--subtitles &,
+  .player__button--fullscreen & {
+    position: relative;
+    top: 1px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -107,7 +113,7 @@
   }
 
   .player__scale-block {
-    background-color: transparent;
+    background-color: @full-transparent;
     height: 93px;
     width: 67%;
     transform: translateY(0);
@@ -135,6 +141,16 @@
     .player__button:active & {
       opacity: 0.3;
     }
+
+    .player__button--replay & {
+      position: relative;
+      top: -1px;
+    }
+
+    .player__button--subtitles &,
+    .player__button--fullscreen & {
+      top: 0;
+    }
   }
 }
 
@@ -149,5 +165,15 @@
 
   .player__buttons-list {
     padding-right: 20px;
+  }
+
+  .player__button-icon {
+    .player__button--subtitles & {
+      left: 2px;
+    }
+
+    .player__button--fullscreen & {
+      left: 1px;
+    }
   }
 }

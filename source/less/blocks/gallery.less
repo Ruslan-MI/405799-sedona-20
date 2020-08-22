@@ -6,7 +6,7 @@
 .gallery__heading {
   margin: 0;
   font-size: 18px;
-  padding-bottom: 31px;
+  padding: 0 0 31px 3px;
 }
 
 .gallery__intro {
@@ -15,11 +15,11 @@
   color: @dark-text;
 
   &--photo {
-    padding: 0 16px 31px;
+    padding: 0 16px 31px 19px;
   }
 
   &--video {
-    padding: 0 24px 34px;
+    padding: 0 24px 34px 26px;
   }
 }
 
@@ -98,7 +98,7 @@
   font-size: 18px;
   line-height: 26px;
   margin: 0;
-  padding-bottom: 28px;
+  padding: 0 0 28px 2px;
 }
 
 @media (min-width: @tablet-width) {
@@ -108,7 +108,7 @@
 
   .gallery__heading {
     font-size: 30px;
-    padding-bottom: 36px;
+    padding: 0 0 36px;
   }
 
   .gallery__intro {
@@ -186,7 +186,7 @@
 
   .gallery__question {
     font-size: 30px;
-    padding-bottom: 33px;
+    padding: 0 1px 33px 0;
   }
 }
 
@@ -254,5 +254,10 @@
 
   .gallery__video-block {
     padding-top: 61px;
+  }
+
+  .gallery__player {
+    position: relative;
+    left: -1px;
   }
 }
