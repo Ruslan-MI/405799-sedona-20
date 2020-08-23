@@ -4,8 +4,6 @@
 
 .developer__link {
   color: inherit;
-  position: relative;
-  left: -4px;
 
   &:hover .developer__link-logo,
   &:active .developer__link-logo {
@@ -33,5 +31,15 @@
   .developer__link {
     top: -5px;
     left: -8px;
+  }
+
+  .developer__link-logo {
+    left: 9px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .developer__link-logo {
+    left: 8px;
   }
 }
