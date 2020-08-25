@@ -1,12 +1,12 @@
-.welcome {
+.intro {
   padding-bottom: 14px;
 }
 
-.welcome__wrapper {
+.intro__wrapper {
   .img-colors();
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   background-size: cover;
   box-sizing: border-box;
   position: relative;
@@ -35,7 +35,7 @@
   }
 }
 
-.welcome__description {
+.intro__description {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -44,7 +44,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .welcome {
+  .intro {
     padding-bottom: 30px;
 
     &--index {
@@ -52,7 +52,7 @@
     }
   }
 
-  .welcome__wrapper {
+  .intro__wrapper {
     background-image: url("../img/bg-back-tablet@1x.jpg");
     padding-top: 94px;
     height: 290px;
@@ -72,7 +72,7 @@
     }
   }
 
-  .welcome__image {
+  .intro__image {
     width: 460px;
     height: 80px;
 
@@ -81,7 +81,7 @@
     }
   }
 
-  .welcome__description {
+  .intro__description {
     font-size: 21px;
     padding: 0;
     padding-top: 44px;
@@ -91,7 +91,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .welcome__wrapper {
+  .intro__wrapper {
     background-image: url("../img/bg-back-desktop@1x.jpg");
     padding-top: 101px;
     height: 301px;
@@ -110,7 +110,7 @@
     }
   }
 
-  .welcome__description {
+  .intro__description {
     padding-top: 56px;
   }
 }
