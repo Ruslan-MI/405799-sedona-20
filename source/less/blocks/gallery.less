@@ -81,6 +81,7 @@
 }
 
 .gallery__like-icon {
+  fill: @general-black;
   opacity: 0.3;
 }
 
@@ -236,20 +237,8 @@
   }
 
   .gallery__like-icon {
+    fill: @general-white;
     opacity: 1;
-
-    .gallery__like-button:hover &,
-    .gallery__like-button:focus & {
-      opacity: 0.6;
-    }
-
-    .gallery__like-button:active & {
-      opacity: 0.3;
-    }
-
-    & path {
-      fill: @general-white;
-    }
   }
 
   .gallery__video-block {
