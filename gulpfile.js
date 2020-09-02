@@ -51,7 +51,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
 exports.default = gulp.series(
@@ -61,13 +61,13 @@ exports.default = gulp.series(
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.mozjpeg({quality: 75, progressive: true}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("source/img"))
+  return gulp.src(["source/img/**/*.{jpg,png,svg}", "!source/img/**/adaptive-*.svg"])
+    .pipe(imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"))
 }
 
 exports.images = images;
@@ -76,8 +76,8 @@ exports.images = images;
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img"))
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("source/img"))
 }
 
 exports.webp = createWebp;
@@ -86,12 +86,25 @@ exports.webp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
-  .pipe(svgstore())
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"))
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img/sprite"))
 }
 
 exports.sprite = sprite;
+
+// HTML
+
+const html = () => {
+  return gulp.src([
+    "source/*.html"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
+}
+
+exports.html = html;
 
 // Copy
 
@@ -100,12 +113,11 @@ const copy = () => {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico",
-    "source/*.html"
+    "source/*.ico"
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("build"))
 }
 
 exports.copy = copy;
@@ -121,5 +133,11 @@ exports.clean = clean;
 // Build
 
 exports.build = gulp.series(
-  clean, copy, styles, sprite
+  clean, copy, styles, sprite, html
+)
+
+// Start
+
+exports.start = gulp.series(
+  clean, copy, styles, sprite, html, server, watcher
 )
