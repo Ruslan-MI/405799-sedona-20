@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -25,7 +26,7 @@
         <!-- main-navigation mods: main-navigation--closed - hidden main menu; main-navigation--opened - show main menu; main-navigation--nojs -- hidden main menu toggle button. -->
         <div class="main-navigation__wrapper">
           <a class="main-navigation__logo-link" title="Вы находитесь на главной странице">
-            <img class="main-navigation__logo-image" src="img/logo-sedona-adaptive.svg" width="187" height="96"
+            <img class="main-navigation__logo-image" src="img/adaptive-logo-sedona.svg" width="187" height="96"
               alt="«City of Sedona»">
           </a>
           <button class="main-navigation__toggle-button" type="button">
@@ -135,7 +136,7 @@
                   srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-                <img class="reasons__item-photo" src="img/main-bridge-mobile@1x.jpg"
+                <img class="reasons__item-photo" loading="lazy" src="img/main-bridge-mobile@1x.jpg"
                   srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Скала в форме моста">
               </picture>
             </div>
@@ -190,8 +191,9 @@
             <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-            <img class="search__map-image" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x"
-              width="320" height="350" alt="Город Седона находится в США, в штате Аризона, почтовый индекс 86336">
+            <img class="search__map-image" loading="lazy" src="img/bg-map-mobile@1x.jpg"
+              srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="350"
+              alt="Город Седона находится в США, в штате Аризона, почтовый индекс 86336">
           </picture>
         </div>
       </section>
