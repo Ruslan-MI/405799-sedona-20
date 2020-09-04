@@ -37,7 +37,7 @@
 
   <div class="page-body__container">
     <header class="page-header">
-      <nav class="main-navigation main-navigation--opened">
+      <nav class="main-navigation main-navigation--opened main-navigation--nojs">
         <!-- main-navigation mods: main-navigation--closed - hidden main menu; main-navigation--opened - show main menu; main-navigation--nojs -- hidden main menu toggle button. -->
         <div class="main-navigation__wrapper">
           <a class="main-navigation__logo-link" href="index.html" title="Перейти на главную">
@@ -239,7 +239,8 @@
                       <div class="player__scale-progress"></div>
                     </div>
                   </div>
-                  <div class="player__scale-point" tabindex="0"></div>
+                  <div class="player__scale-point" tabindex="0" aria-label="Ползунок на шкале воспроизведения видео">
+                  </div>
                 </div>
               </div>
               <ul class="player__buttons-list">
@@ -258,7 +259,8 @@
                   </button>
                 </li>
                 <li class="player__buttons-item">
-                  <button class="player__button player__button--fullscreen" type="button" aria-label="На весь экран">
+                  <button class="player__button player__button--fullscreen" type="button"
+                    aria-label="Включить полноэкранный режим">
                     <svg class="player__button-icon" width="20px" height="20px" aria-hidden="true">
                       <use xlink:href="#icon-fullscreen"></use>
                     </svg>
